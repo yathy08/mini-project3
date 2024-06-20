@@ -5,7 +5,6 @@ package handler
 import (
 	"net/http"
 	"strconv"
-
 	"github.com/gin-gonic/gin"
 	"github.com/yathy08/mini-project3/internal/repository"
 	"github.com/yathy08/mini-project3/internal/service"
@@ -13,7 +12,7 @@ import (
 
 const apiURL = "https://reqres.in/api/users"
 
-// GetAll handles the request to get all users.
+
 func GetAll(c *gin.Context) {
 	data, err := repository.FetchUsers(apiURL)
 	if err != nil {
@@ -30,7 +29,6 @@ func GetAll(c *gin.Context) {
 	c.JSON(http.StatusOK, users)
 }
 
-// GetByID handles the request to get a user by ID.
 func GetByID(c *gin.Context) {
 	id, err := strconv.Atoi(c.Param("id"))
 	if err != nil || id <= 0 {
