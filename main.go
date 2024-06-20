@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/yourusername/yourproject/internal/handler"
+	"github.com/yathy08/mini-project3/internal/handler"
 )
 
 func main() {

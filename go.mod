@@ -1,4 +1,4 @@
-module meetup-go
+module github.com/yathy08/mini-project3
 
 go 1.14
 

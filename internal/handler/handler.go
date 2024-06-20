@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/yourusername/yourproject/internal/repository"
-	"github.com/yourusername/yourproject/internal/service"
+	"github.com/yathy08/mini-project3/internal/repository"
+	"github.com/yathy08/mini-project3/internal/service"
 )
 
 const apiURL = "https://reqres.in/api/users"

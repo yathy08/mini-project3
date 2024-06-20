@@ -4,7 +4,7 @@ package service
 
 import (
 	"encoding/json"
-	"github.com/yourusername/yourproject/internal/domain"
+	"github.com/yathy08/mini-project3/internal/domain"
 )
 
 
