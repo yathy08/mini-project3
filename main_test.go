@@ -63,7 +63,7 @@ func TestGetByID(t *testing.T) {
 		Reply(200).
 		JSON(map[string]interface{}{
 			"data": []domain.User{
-				{ID: 2, Email: "garzao@e.o.cara"},
+				{ID: 1, Email: "garzao@e.o.cara"},
 			},
 		})
 
