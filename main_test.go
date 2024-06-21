@@ -31,7 +31,6 @@ func TestGetAll(t *testing.T) {
 	rr := httptest.NewRecorder()
 	router.ServeHTTP(rr, req)
 
-	
 	if rr.Code != http.StatusOK {
 		t.Fatalf("expected %v; got %v", http.StatusOK, rr.Code)
 	}

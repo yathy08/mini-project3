@@ -1,15 +1,14 @@
 package handler
 
 import (
-	"net/http"
-	"strconv"
 	"github.com/gin-gonic/gin"
 	"github.com/yathy08/mini-project3/internal/repository"
 	"github.com/yathy08/mini-project3/internal/service"
+	"net/http"
+	"strconv"
 )
 
 const apiURL = "https://reqres.in/api/users"
-
 
 func GetAll(c *gin.Context) {
 	data, err := repository.FetchUsers(apiURL)

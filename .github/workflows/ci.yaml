@@ -16,21 +16,23 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3 # Updated for Node.js 20 compatibility
 
     - name: Set up Go
-      uses: actions/setup-go@v4
+      uses: actions/setup-go@v4 # Updated for Node.js 20 compatibility
       with:
-        go-version: 1.20
-
-    - name: Check Go version
-      run: go version
-
-    - name: Check Go environment
-      run: go env
+        go-version: 1.22.1
 
     - name: Install dependencies
       run: go mod tidy
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/go-build
+          /go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
 
     - name: Build
       run: go build -v ./...

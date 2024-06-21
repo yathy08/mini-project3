@@ -7,7 +7,6 @@ import (
 	"github.com/yathy08/mini-project3/internal/domain"
 )
 
-
 type Users struct {
 	Data []domain.User `json:"data"`
 }
@@ -20,7 +19,6 @@ func UnmarshalUsers(data []byte) (*Users, error) {
 	}
 	return &users, nil
 }
-
 
 func FilterByID(users *Users, id int) *domain.User {
 	for _, user := range users.Data {
