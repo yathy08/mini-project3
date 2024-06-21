@@ -1,6 +1,6 @@
 module github.com/yathy08/mini-project3
 
-go 1.22
+go 1.22.1
 
 require (
 	github.com/gin-gonic/gin v1.10.0
