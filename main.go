@@ -10,8 +10,6 @@ import (
 
 func main() {
 	r := gin.Default()
-
-	// Define routes
 	r.GET("/", handler.GetAll)
 	r.GET("/:id", handler.GetByID)
 
